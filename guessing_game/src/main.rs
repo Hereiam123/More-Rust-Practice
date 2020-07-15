@@ -17,7 +17,9 @@ fn main() {
         .read_line(&mut guess)
         .expect("Failed to read line");
 
-    //COnvert from String to numeric i32 guess
+    /*Convert from String to numeric u32 guess.
+    Type required for parse of string*/
+    //.parse returns a 'Result' type, so 'expect' is needed
     let guess: u32 = guess.trim().parse().expect("Please type a number!");
 
     println!("You guessed: {}", guess);
