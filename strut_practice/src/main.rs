@@ -14,12 +14,16 @@ impl Rectangle {
 
 fn main() {
     let rect1 = Rectangle {
-        width: 30,
+        width: 40,
         height: 50,
     };
 
     println!(
         "The area of the rectangle is {} square pixels.",
+        //Auto dereferencing works in rust
+        //e.g. below is equivalent to &rect.area()
         rect1.area()
     );
+
+    println!("{:?}", rect1);
 }
